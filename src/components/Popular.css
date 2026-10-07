@@ -1,0 +1,264 @@
+/* Popular Products Section Styles */
+
+.popular-section {
+  position: relative;
+  width: 100%;
+  padding: 80px 0 60px;
+  overflow: hidden;
+}
+
+/* Heading */
+.popular-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #123d38;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Main Container with Big Decorative Chair & Carousel */
+.popular-content-wrapper {
+  position: relative;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Big Decorative Chair on the left */
+.popular-bg-chair {
+ position: absolute;
+    left: -266px;
+    top: -45px;
+    width: 599px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12));
+    transition: transform 0.3s ease;
+}
+
+/* Carousel Outer Area (offset to let chair peek in on the left) */
+.popular-carousel-area {
+  position: relative;
+  z-index: 2;
+  margin-left: 120px;
+}
+
+/* Scrollable Cards Container */
+.popular-cards-container {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding: 10px 4px 20px 4px;
+  width: 120%;
+}
+
+.popular-cards-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Product Card */
+.popular-card {
+  flex: 0 0 270px;
+  width: 270px;
+  height: 385px;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+}
+
+.popular-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+/* Card Image Area */
+.popular-card-img-box {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.popular-card-img {
+  max-width: 90%;
+  max-height: 190px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.popular-card:hover .popular-card-img {
+  transform: scale(1.06);
+}
+
+/* Card Text Info */
+.popular-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.popular-card-title {
+  font-family: inherit;
+  font-size: 19px;
+  font-weight: 700;
+  color: #194642;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.popular-card-subtitle {
+  font-size: 13.5px;
+  color: #749691;
+  font-weight: 400;
+  margin: 0;
+}
+
+.popular-card-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #194642;
+  margin: 6px 0 0 0;
+}
+
+/* Horizontal Track & Progress Indicator */
+.popular-track-wrapper {
+  margin-top: 30px;
+  position: relative;
+}
+
+.popular-track-line {
+  width: 100%;
+  height: 2px;
+  background-color: #174541;
+  border-radius: 2px;
+  position: relative;
+}
+
+/* Dynamic Active Progress Pill */
+.popular-track-thumb {
+  position: absolute;
+  top: -2px;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #709a93;
+  transition: left 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Arrows Navigation Controls (Right aligned below track) */
+.popular-arrows-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.popular-circle-arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.popular-circle-arrow-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.popular-circle-arrow-btn:active {
+  transform: scale(0.96);
+}
+
+.popular-arrow-left {
+  background-color: #e0eff6;
+  color: #37605d;
+}
+
+.popular-arrow-right {
+  background-color: #f9d9da;
+  color: #764547;
+}
+
+/* Explore All Items Button (Centered below) */
+.popular-explore-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.popular-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #557b75;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 13px 26px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(85, 123, 117, 0.2);
+}
+
+.popular-explore-btn:hover {
+  background-color: #456b65;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(85, 123, 117, 0.3);
+}
+
+.popular-explore-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.popular-explore-btn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .popular-bg-chair {
+    display: none;
+  }
+  .popular-carousel-area {
+    margin-left: 0;
+  }
+  .popular-heading {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 576px) {
+  .popular-card {
+    flex: 0 0 240px;
+    width: 240px;
+    height: 350px;
+    padding: 18px 16px;
+  }
+  .popular-card-img-box {
+    height: 180px;
+  }
+  .popular-card-img {
+    max-height: 150px;
+  }
+  .popular-heading {
+    font-size: 30px;
+  }
+}

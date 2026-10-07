@@ -1,0 +1,1167 @@
+/* index.css */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+.category-heading {
+  font-family: "Playfair Display", serif;
+  font-weight: 600; /* Adjust weight if needed (e.g., 500, 600, 700) */
+  color: #0d3b33; /* Matches the deep teal/green shade in your image */
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.Navsection {
+  height: 700px;
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  opacity: 0.9;
+  display: block;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Navbar absolute positioning */
+.navbarcontainer {
+  position: absolute !important;
+  top: 20px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  background: transparent !important;
+}
+
+/* Hero Content absolute positioning & Desktop Typography */
+.hero-content {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 0 2rem;
+  color: rgb(7, 72, 74);
+}
+
+.hero-title {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+}
+
+.hero-btn {
+  background-color: rgb(112, 144, 139) !important;
+  color: white !important;
+  padding: 10px 24px;
+  font-weight: 600;
+}
+
+.navlink {
+  color: rgb(7, 72, 74);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.navlink:hover {
+  color: rgb(7, 72, 74);
+  font-weight: bold;
+  border-bottom: 4px solid rgb(7, 72, 74);
+}
+
+/* --- Mobile & Tablet Responsive Adjustments --- */
+@media (max-width: 991px) {
+  .Navsection {
+    height: 480px;
+    border-radius: 0 0 30px 30px;
+  }
+
+  .hero-content {
+    top: 130px; /* Adjust top positioning for medium screens */
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 36px; /* Scales down heading for tablets */
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .navbar-collapse.show {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .Navsection {
+    height: 400px; /* Compact height for smaller mobile devices */
+  }
+
+  .logo {
+    width: 65px;
+  }
+
+  .hero-content {
+    top: 105px; /* Fits text nicely right under mobile navbar */
+  }
+
+  .hero-title {
+    font-size: 24px; /* Scales down heading cleanly for small phones */
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    margin-top: 8px !important;
+  }
+}
+
+.CatHeading {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(7, 72, 74);
+  text-align: center;
+}
+
+.category-section {
+  margin-top: 100px;
+}
+
+.inputCont {
+  border: none;
+  text-decoration: none;
+  background-color: rgb(240, 240, 240);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  outline: none;
+}
+
+.category_buttons {
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  outline: none;
+}
+
+.upbtn {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: #e0eff6;
+}
+.downbtn {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: #f9d9da;
+}
+
+.updownbtn {
+  position: relative;
+  top: 668px;
+  left: -21px;
+  gap: 15px;
+}
+
+.Allcategories {
+  border: none;
+  text-decoration: none;
+  outline: none;
+  padding: 25px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: rgb(112, 144, 139);
+  color: white;
+  font-weight: 600;
+}
+
+.testdiv {
+  height: 300px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.testdiv img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.ChairImage {
+  width: 70%;
+  height: 70%;
+  position: relative;
+  top: -140px;
+  left: -502px;
+  z-index: -1;
+}
+
+.cardContainer {
+  width: 500px;
+  height: 200px;
+  box-shadow:
+    rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.ChairCards {
+  position: relative;
+  z-index: 10;
+  top: -900px;
+}
+
+.CuntChair {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.cuntHr {
+  border: 3px solid black;
+}
+
+.cunthrbtn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+.cunthrbtn > button {
+  padding: 12px;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+}
+
+.Expbutton {
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  background-color: #70908b;
+  margin-top: 40px;
+  color: white;
+  font-weight: 600;
+}
+
+.Specialsection {
+  position: relative;
+  top: 0;
+  margin-top: 60px;
+}
+
+.Spech1 {
+  font-weight: 700;
+  font-size: 80px;
+}
+
+.Imagecontainer {
+  height: 600px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.nestesBtn {
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  border-radius: 10px;
+  background-color: #70908b;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.containercunt {
+  line-height: 2;
+  background-color: #e0f6f1;
+}
+
+.Cards {
+  margin-top: 30px;
+}
+
+.buttonsofupdown .upbtn {
+  margin-bottom: 30px;
+}
+.buttonsofupdown {
+  position: relative;
+  left: -4px;
+  top: 58px;
+}
+.mainContainer {
+  width: 600px;
+  height: 500px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  opacity: 0.7;
+}
+
+.OurCreation {
+  position: relative;
+  top: -531px;
+}
+.mainContainer {
+  position: relative;
+  left: -150px;
+  border-radius: 10px;
+}
+
+.headingour {
+  position: relative;
+  top: -349px;
+  left: 100px;
+}
+.Imagediv {
+  width: 600px;
+  height: 500px;
+}
+
+.Leftbutton {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: rgb(224, 239, 246);
+}
+
+.Rightbutton {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: rgb(249, 217, 218);
+}
+
+.cardCunt {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.leftcontainer {
+  position: relative;
+  left: 300px;
+}
+
+.leftcontainer > row {
+  gap: 30px;
+}
+
+.cardCunts {
+  height: 500px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.AllRoomsbtn {
+  position: relative;
+  top: -100px;
+  left: 90px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  border-radius: 5px;
+  display: none;
+}
+.backgroundsection {
+  background-color: #e0eff6;
+  height: 650px;
+}
+
+.BenifitsSection {
+  position: relative;
+  top: 0;
+  margin-top: 60px;
+}
+
+.category-heading {
+  font-weight: 900;
+  margin-top: 118px;
+}
+
+.ProductImage {
+  width: 5px;
+  height: 5px;
+}
+
+.footerInput {
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.Productcontainer {
+  text-align: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.Productiamge {
+  position: relative;
+  left: 233px;
+}
+
+.h5margin {
+  margin-top: 40px;
+}
+
+.TestimonialsHeading {
+  text-align: center;
+}
+
+.TestimonialsSection {
+  position: relative;
+  top: 0;
+  margin-top: 60px;
+}
+
+/* Responsive layout and interactive testimonial slider */
+.testimonial-wrap {
+  margin-top: 48px;
+  padding-bottom: 84px;
+}
+.TestimonialsHeading p {
+  color: #2c6461;
+  font-size: 18px;
+}
+.testimonial-content {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(320px, 1.4fr) auto;
+  align-items: center;
+  gap: clamp(28px, 5vw, 80px);
+}
+.testimonial-image-wrap {
+  position: relative;
+}
+.testimonial-image {
+  width: 100%;
+  aspect-ratio: 1/0.82;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+.quote-mark {
+  position: absolute;
+  z-index: 1;
+  left: -44px;
+  top: -38px;
+  color: #e0eff6;
+  font:
+    900 clamp(96px, 11vw, 180px)/0.6 Georgia,
+    serif;
+}
+.testimonial-copy blockquote {
+  margin: 0 0 28px;
+  color: #1d5d5c;
+  font-size: clamp(20px, 2vw, 32px);
+  line-height: 1.35;
+  font-weight: 400;
+}
+.testimonial-copy h3 {
+  margin: 0;
+  color: #155452;
+  font-size: 18px;
+}
+.testimonial-copy p {
+  margin: 4px 0 0;
+  color: #718483;
+}
+.testimonial-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonial-controls button {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.testimonial-controls button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px #0d3b3326;
+}
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-top: 48px;
+}
+.testimonial-progress {
+  position: relative;
+  flex: 1;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+  outline: none;
+}
+.testimonial-progress:focus-visible {
+  outline: 2px solid #2a706c;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.testimonial-progress-rail {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #d9e8e6;
+  border-radius: 4px;
+  overflow: visible;
+  transition: height 0.2s ease, background-color 0.2s ease;
+  pointer-events: none;
+}
+.testimonial-progress:hover .testimonial-progress-rail,
+.testimonial-progress.is-dragging .testimonial-progress-rail {
+  height: 6px;
+  background: #c5deda;
+}
+.testimonial-progress-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #2a706c;
+  border-radius: 4px;
+  transition: width 0.3s cubic-bezier(0.2, 0.9, 0.4, 1);
+  pointer-events: none;
+}
+.testimonial-progress.is-dragging .testimonial-progress-fill {
+  transition: none; /* Instant follow when dragging */
+}
+.testimonial-progress-thumb {
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 14px;
+  height: 14px;
+  background: #2a706c;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(13, 59, 51, 0.35);
+  transition: transform 0.2s ease;
+  pointer-events: none;
+}
+.testimonial-progress:hover .testimonial-progress-thumb,
+.testimonial-progress.is-dragging .testimonial-progress-thumb {
+  transform: translateY(-50%) scale(1);
+}
+.all-reviews {
+  border: 0;
+  background: transparent;
+  color: #155452;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+.all-reviews:hover {
+  transform: translateX(3px);
+  color: #0b3734;
+}
+.newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e0f6f1;
+}
+.newsletter-visual {
+  min-height: 330px;
+  background: #d8d8d8;
+}
+.newsletter-form {
+  padding: 58px clamp(28px, 8vw, 130px);
+}
+.newsletter-form h2 {
+  font-size: clamp(30px, 3vw, 44px);
+  margin: 0 0 12px;
+}
+.newsletter-form p {
+  color: #4f7170;
+}
+.newsletter form {
+  display: flex;
+  gap: 10px;
+  margin-top: 26px;
+}
+.newsletter input {
+  min-width: 0;
+  flex: 1;
+  padding: 13px 14px;
+  border: 1px solid #ccdedd;
+  background: #fff;
+}
+.newsletter button {
+  padding: 13px 23px;
+  border: 0;
+  background: #70908b;
+  color: white;
+  font-weight: 700;
+}
+.site-footer {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  gap: 32px;
+  padding: 54px 12px 30px;
+  color: #1d5d5c;
+}
+.footer-brand img {
+  width: 100px;
+}
+.footer-brand p {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+.site-footer h3 {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+.site-footer a {
+  color: #47706f;
+  display: block;
+  text-decoration: none;
+  margin: 8px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+.copyright {
+  color: #6b8583;
+  padding-bottom: 24px;
+  font-size: 12px;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 32px;
+}
+/* The testimonial section is visually lifted in the desktop composition. Match that in footer flow to remove the empty gap. */
+.TestimonialsSection + footer {
+  margin-top: 0;
+}
+.subscribe-message {
+  margin: 12px 0 0;
+  color: #17615a !important;
+  font-weight: 700;
+}
+.popular-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #70908b #e0eff6;
+}
+.popular-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.popular-scroll::-webkit-scrollbar-thumb {
+  background: #70908b;
+  border-radius: 99px;
+}
+.popular-scroll::-webkit-scrollbar-track {
+  background: #e0eff6;
+}
+
+@media (max-width: 991px) {
+  .container-fluid.ms-5.me-5 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  .navbarcontainer .container-fluid {
+    padding: 0 1.5rem !important;
+  }
+  .category-section {
+    margin-top: 64px;
+  }
+  .CatHeading {
+    font-size: clamp(30px, 5vw, 44px);
+  }
+  .category-section .row > .col-3,
+  .category-section .row > .col-9 {
+    width: 100%;
+  }
+  .category-section .col-3 > .container {
+    width: min(100%, 520px) !important;
+    margin: 0 auto !important;
+  }
+  .category-section .col-3 > .container.d-flex {
+    display: none !important;
+  }
+  .category-section .col-9 {
+    margin-top: 24px;
+  }
+  .testdiv {
+    height: 220px;
+  }
+  .testdiv img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .ChairImage {
+    display: none;
+  }
+  .ChairCards {
+    top: auto;
+    margin-top: 32px;
+  }
+  .ChairCards .cardContainer {
+    width: calc(50% - 24px) !important;
+    height: 360px !important;
+    margin: 12px !important;
+  }
+  .CuntChair {
+    height: 250px;
+    object-fit: contain;
+  }
+  .Specialsection,
+  .OurCreation,
+  .BenifitsSection,
+  .TestimonialsSection {
+    position: static;
+    top: auto;
+    margin-top: 80px;
+  }
+  .Spech1 {
+    font-size: clamp(34px, 6vw, 56px);
+  }
+  .Imagecontainer {
+    height: auto;
+    aspect-ratio: 1.25;
+    object-fit: cover;
+  }
+  .TestimonialsSection + footer {
+    margin-top: 0;
+  }
+  .OurCreation .container-fluid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .Imagediv {
+    position: relative !important;
+    width: 100%;
+    height: auto;
+  }
+  .mainContainer {
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+  .headingour {
+    top: auto;
+    left: 0;
+    margin: -280px 0 120px 60px;
+    color: white;
+  }
+  .leftcontainer {
+    left: 0;
+  }
+  .leftcontainer .row {
+    gap: 20px !important;
+    justify-content: center;
+  }
+  .cardCunt,
+  .cardCunts {
+    height: 330px;
+  }
+  .backgroundsection {
+    height: auto;
+    padding: 1px 0 70px;
+  }
+  .Productiamge {
+    left: auto;
+    margin: auto;
+  }
+}
+@media (max-width: 576px) {
+  .hero-content .container-fluid {
+    margin: 0 !important;
+  }
+  .navbarcontainer {
+    top: 10px;
+  }
+  .navbarcontainer .container-fluid {
+    padding: 0 1rem !important;
+  }
+  .icons-container {
+    display: none !important;
+  }
+  .CatHeading,
+  .category-heading {
+    margin-top: 0;
+  }
+  .category-section {
+    margin-top: 48px;
+  }
+  .category-section .container {
+    padding-inline: 20px;
+  }
+  .testdiv {
+    height: 150px;
+    margin-top: 12px;
+  }
+  .ChairCards .cardContainer {
+    width: calc(100% - 24px) !important;
+    height: 320px !important;
+  }
+  .CuntChair {
+    height: 220px;
+  }
+  .cunthrbtn {
+    justify-content: center;
+  }
+  .Expbutton {
+    margin-top: 24px;
+  }
+  .Specialsection .container,
+  .Specialsection .container.mt-5 {
+    padding-inline: 18px;
+  }
+  .Specialsection .row > .col-6 {
+    width: 100%;
+  }
+  .Specialsection .row > .col-6 + .col-6 {
+    margin-top: 40px;
+  }
+  .Imagecontainer {
+    aspect-ratio: 1.25;
+  }
+  .verticalRuler,
+  .Cards {
+    padding: 0;
+  }
+  .verticalRuler .row > .col-5,
+  .verticalRuler .row > .col-6 {
+    width: 50%;
+  }
+  .verticalRuler .col-1 {
+    display: none;
+  }
+  .verticalRuler img {
+    height: 120px !important;
+  }
+  .containercunt {
+    padding: 10px;
+  }
+  .containercunt h5 {
+    font-size: 11px;
+  }
+  .containercunt h5[style] {
+    margin-left: 8px !important;
+  }
+  .OurCreation {
+    margin-top: 56px;
+  }
+  .headingour {
+    margin: -210px 0 100px 34px;
+  }
+  .headingour h1 {
+    font-size: 29px;
+  }
+  .leftcontainer .col-3 {
+    width: 75%;
+  }
+  .cardCunt,
+  .cardCunts {
+    height: 300px;
+  }
+  .AllRoomsbtn {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .BenifitsSection {
+    margin-top: 56px;
+  }
+  .BenifitsHeading h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 29px;
+  }
+  .Productcontainer {
+    width: 100%;
+    margin-top: 48px !important;
+  }
+  .h5margin {
+    margin-top: 16px;
+  }
+  .TestimonialsSection {
+    margin-top: 56px;
+  }
+  .TestimonialsHeading {
+    padding-inline: 16px;
+  }
+  .TestimonialsHeading p {
+    font-size: 15px;
+  }
+  .testimonial-wrap {
+    margin-top: 34px;
+    padding: 0 24px 60px;
+  }
+  .testimonial-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .testimonial-image-wrap {
+    max-width: 300px;
+  }
+  .quote-mark {
+    left: -22px;
+    top: -22px;
+  }
+  .testimonial-copy {
+    order: 2;
+  }
+  .testimonial-copy blockquote {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .testimonial-controls {
+    order: 3;
+    flex-direction: row;
+  }
+  .testimonial-footer {
+    margin-top: 30px;
+    gap: 14px;
+  }
+  .all-reviews {
+    font-size: 12px;
+  }
+  .newsletter {
+    grid-template-columns: 1fr;
+  }
+  .newsletter-visual {
+    min-height: 150px;
+  }
+  .newsletter-form {
+    padding: 42px 24px;
+  }
+  .newsletter form {
+    flex-direction: column;
+  }
+  .site-footer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 42px 24px 24px;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+  .copyright {
+    padding: 0 24px 24px;
+  }
+}
+
+.NavbarNavigator {
+  /* 1. Semi-transparent background tinted with system color */
+  background: rgba(255, 255, 255, 0.4);
+
+  /* 2. The magic: Blurs what is behind the element & increases vividness */
+  backdrop-filter: blur(20px) saturate(190%) brightness(100%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%) brightness(100%); /* Safari support */
+
+  /* 3. High-end hardware edge: Thin white transparent border for light reflection */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  /* 4. Multi-layered shadow stack for a floating 3D depth effect */
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.08),
+    inset 0 1.5px 0 0 rgba(255, 255, 255, 0.6); /* Core Apple top-edge highlight */
+
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.navbarcontainer {
+  position: fixed;
+}
+
+/* Container establishing relative positioning boundary */
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px; /* Optional rounded corners */
+}
+
+/* Ensure the image fills the container */
+.category-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Position overlay text directly inside the image */
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  /* Flexbox to align content (e.g., bottom-left corner) */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align to bottom */
+  align-items: flex-start; /* Align to left */
+
+  padding: 20px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    transparent
+  ); /* Gradient shadow for legibility */
+  color: white;
+}
+
+.category-title {
+  font-size: 50px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.category-btn {
+  padding: 8px 30px;
+  background-color: #ffffff;
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+}
+
+.category-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Sets up positioning rules for the card container */
+.category-card {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hides all overlays by default layout rules */
+.category-card .category-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Shadows out card background */
+  z-index: 2;
+}
+
+/* Displays ONLY the specific overlay inside the card currently being hovered */
+.category-card:hover .category-overlay {
+  display: block;
+}
+
+.cardcontianeralign {
+  align-items: center;
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+
+/* Sidebar items containers alignment layout styles */
+.category-links-container {
+  display: flex;
+  flex-direction: column;
+  gap: 43px;
+}
+
+.sidebar-link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  cursor: pointer;
+  margin-top: 45px; /* Clean structured list spacing gaps */
+  transition: all 0.2s ease;
+}
+
+.sidebar-text {
+  margin: 0;
+  padding-left: 20px;
+  transition:
+    color 0.2s ease,
+    font-weight 0.2s ease;
+}
+
+/* Small indicator marker placed perfectly line-right next to text item sets */
+.active-indicator-bar {
+  display: inline-block;
+  width: 4px;
+  height: 24px;
+  border-radius: 2px;
+  margin-left: 15px;
+  transition: background-color 0.2s ease;
+  position: relative;
+  left: 10px;
+}
+
+/* Right grid frame configurations remains constant */
+.grid-scroll-container {
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+.grid-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cardCunts:hover {
+  opacity: 0.6;
+  height: 550px;
+  width: 105%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: relative;
+  top: -21px;
+}
+
+.AllRoomsbtn {
+  display: block;
+}

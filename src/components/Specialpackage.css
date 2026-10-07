@@ -1,0 +1,494 @@
+/* Special Package Section Styles - Matching Reference Design */
+
+.special-package-section {
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  margin: 60px auto 100px;
+  padding: 0 24px;
+}
+
+/* Heading */
+.special-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #123d38;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* Two Columns Grid */
+.special-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 52px;
+  align-items: flex-start;
+}
+
+/* LEFT COLUMN: Main Featured Package */
+.special-featured-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.special-main-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 14px;
+  overflow: hidden;
+  background-color: #e3e7e8;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.special-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.special-main-image-wrap:hover .special-main-image {
+  transform: scale(1.03);
+}
+
+/* Fullscreen / Expand button on main image */
+.special-expand-btn {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background-color: #174541;
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 5;
+}
+
+.special-expand-btn:hover {
+  background-color: #0f3330;
+  transform: scale(1.08);
+}
+
+/* Main Product Details Row */
+.special-featured-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 22px;
+}
+
+.special-featured-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.special-featured-title {
+  font-family: inherit;
+  font-size: 26px;
+  font-weight: 600;
+  color: #194642;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.special-stars-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.special-featured-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #194642;
+  margin: 0;
+}
+
+/* Add to Cart Button */
+.special-add-cart-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #557b75;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(85, 123, 117, 0.2);
+}
+
+.special-add-cart-btn:hover {
+  background-color: #456b65;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(85, 123, 117, 0.3);
+}
+
+.special-add-cart-btn.added {
+  background-color: #2b7067;
+}
+
+/* RIGHT COLUMN: Description & Package List */
+.special-list-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Description Block */
+.special-description-box {
+  margin-bottom: 24px;
+}
+
+.special-desc-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #194642;
+  margin: 0 0 10px 0;
+}
+
+.special-desc-text {
+  font-size: 13.5px;
+  color: #5a7774;
+  line-height: 1.6;
+  margin: 0 0 8px 0;
+}
+
+.special-see-more-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #194642;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+}
+
+.special-see-more-btn:hover {
+  color: #0d2b28;
+}
+
+.special-see-more-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.special-see-more-btn.open svg {
+  transform: rotate(180deg);
+}
+
+/* Card 1 Top Row (offset on right to align with Card 2 and 3) */
+.special-top-card-wrapper {
+  margin-right: 46px;
+}
+
+/* Individual Package Item Row */
+.special-item-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.special-item-row:hover {
+  transform: translateX(3px);
+}
+
+.special-item-thumb {
+  width: 145px;
+  height: 115px;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background-color: #dce1e3;
+}
+
+.special-item-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.special-item-row:hover .special-item-thumb img {
+  transform: scale(1.05);
+}
+
+/* Package Info Card (Mint when active, transparent when inactive) */
+.special-item-card {
+  flex: 1;
+  min-height: 115px;
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background-color: transparent;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.special-item-card.active {
+  background-color: #e0f7f1;
+  box-shadow: 0 4px 12px rgba(44, 100, 97, 0.08);
+}
+
+.special-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.special-item-name {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #194642;
+  margin: 0;
+}
+
+.special-item-price {
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #194642;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.special-item-card.active .special-item-price {
+  color: #143e3a;
+}
+
+.special-item-desc {
+  font-size: 12px;
+  color: #637f7c;
+  line-height: 1.4;
+  margin: 4px 0 6px 0;
+}
+
+.special-item-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.special-details-link {
+  font-size: 13px;
+  font-weight: 600;
+  color: #55807b;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.special-details-link:hover {
+  color: #184440;
+  text-decoration: underline;
+}
+
+/* Quick Search / View badge on active item */
+.special-search-badge {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #174541;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.special-search-badge:hover {
+  transform: scale(1.15);
+}
+
+/* LOWER SECTION: Card 2 & Card 3 with Vertical Controls Beside Them */
+.special-lower-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.special-lower-cards {
+  flex: 0.9;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* VERTICAL TRACK & ARROWS (Starts level with Card 2, ends at Card 3 buttons) */
+.special-vertical-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 30px;
+}
+
+.special-vertical-track {
+  width: 2px;
+  height: 155px;
+  background-color: #cbd9d6;
+  position: relative;
+  border-radius: 2px;
+}
+
+/* Slider thumb on the vertical line */
+.special-vertical-thumb {
+  position: absolute;
+  left: -1px;
+  width: 4px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #2c5a57;
+  transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Up/Down arrow buttons directly below the track */
+.special-arrow-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.special-arrow-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.special-arrow-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.special-arrow-up {
+  background-color: #e0eff6;
+  color: #3b6562;
+}
+
+.special-arrow-down {
+  background-color: #f9d9da;
+  color: #7a4649;
+}
+
+/* Lightbox / Modal for Expand Image */
+.special-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.82);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.special-lightbox-content {
+  position: relative;
+  max-width: 900px;
+  max-height: 85vh;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.special-lightbox-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.special-lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.special-lightbox-close:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .special-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .special-main-image-wrap {
+    height: 350px;
+  }
+  .special-heading {
+    font-size: 36px;
+  }
+  .special-top-card-wrapper {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .special-item-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .special-item-thumb {
+    width: 100%;
+    height: 160px;
+  }
+  .special-main-image-wrap {
+    height: 250px;
+  }
+  .special-featured-details {
+    flex-direction: column;
+    gap: 18px;
+  }
+}

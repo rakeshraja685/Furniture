@@ -1,0 +1,254 @@
+/* Our Creation Section Styles - Matching Reference Design */
+
+.our-creation-section {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 60px auto 100px;
+  padding: 0 0 0 24px;
+}
+
+/* Main Container: Left Info Block + Right Scrollable Carousel */
+.our-creation-wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  width: 135%;
+}
+
+/* LEFT BLOCK: Teal Info Card */
+.creation-info-card {
+flex: 0 0 540px;
+    width: 340px;
+    min-height: 489px;
+    background-color: #587c77;
+    border-radius: 18px;
+    padding: 139px 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 6px 20px rgba(88, 124, 119, 0.2);
+    z-index: 2;
+        position: relative;
+    left: -237px;
+}
+
+.creation-text-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.creation-title {
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 16px 0;
+  letter-spacing: -0.5px;
+}
+
+.creation-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Bottom Controls: More | Line | Arrows */
+.creation-controls-row {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-top: auto;
+  padding-top: 30px;
+}
+
+.creation-more-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.3px;
+}
+
+/* Horizontal Progress Line */
+.creation-progress-track {
+  width: 80px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.35);
+  position: relative;
+  border-radius: 2px;
+}
+
+.creation-progress-thumb {
+  position: absolute;
+  top: -1px;
+  height: 4px;
+  width: 26px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: left 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Arrow Navigation Buttons */
+.creation-arrows-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.creation-arrow-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.creation-arrow-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.creation-arrow-btn:active {
+  transform: scale(0.96);
+}
+
+.creation-arrow-left {
+  background-color: #e0eff6;
+  color: #37605d;
+}
+
+.creation-arrow-right {
+  background-color: #f9d9da;
+  color: #764547;
+}
+
+/* RIGHT CAROUSEL AREA */
+.creation-carousel-area {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+    left: -217px;
+}
+
+.creation-cards-track {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+  padding: 4px 30px 14px 4px;
+  align-items: stretch;
+}
+
+.creation-cards-track::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Individual Room Card */
+.creation-room-card {
+  flex: 0 0 290px;
+  width: 290px;
+  height: 480px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  background-color: #e3e7e8;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creation-room-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
+}
+
+.creation-room-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.creation-room-card:hover .creation-room-img {
+  transform: scale(1.04);
+}
+
+/* Explore All Rooms Button */
+.creation-explore-btn {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffffff;
+  color: #1f4743;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transition: all 0.25s ease;
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.creation-room-card.active .creation-explore-btn,
+.creation-room-card:hover .creation-explore-btn {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.creation-explore-btn:hover {
+  background-color: #f2f7f6;
+  transform: translateX(-50%) scale(1.04);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.24);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .our-creation-section {
+    padding: 0 20px;
+  }
+  .our-creation-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .creation-info-card {
+    width: 100%;
+    min-height: auto;
+    padding: 36px 28px;
+  }
+  .creation-room-card {
+    flex: 0 0 260px;
+    width: 260px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .creation-title {
+    font-size: 32px;
+  }
+  .creation-room-card {
+    flex: 0 0 230px;
+    width: 230px;
+    height: 350px;
+  }
+}
