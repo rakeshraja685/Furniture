@@ -1,20 +1,20 @@
-/* Popular Products Section Styles */
+/* Popular Products Section Styles - Mobile Responsive */
 
 .popular-section {
   position: relative;
   width: 100%;
-  padding: 80px 0 60px;
+  padding: 60px 0;
   overflow: hidden;
 }
 
 /* Heading */
 .popular-heading {
   font-family: "Playfair Display", serif;
-  font-size: 48px;
+  font-size: clamp(28px, 4vw, 44px);
   font-weight: 700;
   color: #123d38;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 /* Main Container with Big Decorative Chair & Carousel */
@@ -27,47 +27,50 @@
 
 /* Big Decorative Chair on the left */
 .popular-bg-chair {
- position: absolute;
-    left: -266px;
-    top: -45px;
-    width: 599px;
-    height: auto;
-    z-index: 1;
-    pointer-events: none;
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12));
-    transition: transform 0.3s ease;
+  position: absolute;
+  left: -240px;
+  top: -35px;
+  width: 540px;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.1));
+  transition: transform 0.3s ease;
 }
 
-/* Carousel Outer Area (offset to let chair peek in on the left) */
+/* Carousel Outer Area (offset to let chair peek in on desktop) */
 .popular-carousel-area {
   position: relative;
   z-index: 2;
   margin-left: 120px;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Scrollable Cards Container */
 .popular-cards-container {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
   padding: 10px 4px 20px 4px;
-  width: 120%;
+  width: 100%;
 }
 
 .popular-cards-container::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  display: none;
 }
 
 /* Individual Product Card */
 .popular-card {
-  flex: 0 0 270px;
-  width: 270px;
-  height: 385px;
+  flex: 0 0 260px;
+  width: 260px;
+  height: 380px;
   border-radius: 16px;
-  padding: 24px 20px;
+  padding: 22px 18px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -77,13 +80,13 @@
 }
 
 .popular-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
 }
 
 /* Card Image Area */
 .popular-card-img-box {
-  height: 220px;
+  height: 210px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,8 +94,8 @@
 }
 
 .popular-card-img {
-  max-width: 90%;
-  max-height: 190px;
+  max-width: 92%;
+  max-height: 185px;
   object-fit: contain;
   transition: transform 0.4s ease;
 }
@@ -110,7 +113,7 @@
 
 .popular-card-title {
   font-family: inherit;
-  font-size: 19px;
+  font-size: 18px;
   font-weight: 700;
   color: #194642;
   margin: 0;
@@ -118,7 +121,7 @@
 }
 
 .popular-card-subtitle {
-  font-size: 13.5px;
+  font-size: 13px;
   color: #749691;
   font-weight: 400;
   margin: 0;
@@ -128,19 +131,20 @@
   font-size: 18px;
   font-weight: 700;
   color: #194642;
-  margin: 6px 0 0 0;
+  margin: 4px 0 0 0;
 }
 
 /* Horizontal Track & Progress Indicator */
 .popular-track-wrapper {
-  margin-top: 30px;
+  margin-top: 24px;
   position: relative;
+  width: 100%;
 }
 
 .popular-track-line {
   width: 100%;
   height: 2px;
-  background-color: #174541;
+  background-color: #cbdad8;
   border-radius: 2px;
   position: relative;
 }
@@ -151,11 +155,11 @@
   top: -2px;
   height: 6px;
   border-radius: 4px;
-  background-color: #709a93;
+  background-color: #2c5956;
   transition: left 0.2s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Arrows Navigation Controls (Right aligned below track) */
+/* Arrows Navigation Controls */
 .popular-arrows-controls {
   display: flex;
   justify-content: flex-end;
@@ -164,8 +168,8 @@
 }
 
 .popular-circle-arrow-btn {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: none;
   outline: none;
@@ -195,11 +199,11 @@
   color: #764547;
 }
 
-/* Explore All Items Button (Centered below) */
+/* Explore All Items Button */
 .popular-explore-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 36px;
+  margin-top: 32px;
 }
 
 .popular-explore-btn {
@@ -210,8 +214,8 @@
   color: #ffffff;
   border: none;
   border-radius: 8px;
-  padding: 13px 26px;
-  font-size: 15px;
+  padding: 12px 26px;
+  font-size: 14.5px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.25s ease;
@@ -233,32 +237,56 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 991px) {
+@media (max-width: 1100px) {
   .popular-bg-chair {
     display: none;
   }
   .popular-carousel-area {
     margin-left: 0;
   }
-  .popular-heading {
-    font-size: 36px;
-  }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .popular-section {
+    padding: 40px 0;
+  }
+  .popular-content-wrapper {
+    padding: 0 16px;
+  }
   .popular-card {
-    flex: 0 0 240px;
-    width: 240px;
-    height: 350px;
-    padding: 18px 16px;
+    flex: 0 0 230px;
+    width: 230px;
+    height: 340px;
+    padding: 18px 14px;
   }
   .popular-card-img-box {
     height: 180px;
   }
   .popular-card-img {
-    max-height: 150px;
+    max-height: 155px;
   }
-  .popular-heading {
-    font-size: 30px;
+  .popular-card-title {
+    font-size: 16px;
+  }
+  .popular-card-price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popular-card {
+    flex: 0 0 210px;
+    width: 210px;
+    height: 320px;
+  }
+  .popular-card-img-box {
+    height: 160px;
+  }
+  .popular-card-img {
+    max-height: 140px;
+  }
+  .popular-explore-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -1,0 +1,37 @@
+.LoginContainer{
+    height:525px !important;
+    width: 460px;
+ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 15px;
+}
+
+.logininput{
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    outline: none;
+   border: none;
+   /*  */
+     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.LoginButton{
+    width: 80%;
+    padding:10px;
+    background-color:#3588FD ;
+    color:white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.loginAncor{
+    gap:2rem;
+}
+
+.loginAncor >a{
+    text-decoration: none;
+    color:#3588FD;
+    font-size: large;
+}

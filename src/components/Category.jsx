@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Category.css";
 import Bed from "../assets/Bedroom.jpg";
 import Dining from "../assets/Dining.jpg";
@@ -11,21 +12,23 @@ import LivingSpace from "../assets/Creation.png";
 function Category() {
   const [searchTerm, setSearchTerm] = useState("");
   const [hoveredCard, setHoveredCard] = useState(null);
-  const [activeCategory, setActiveCategory] = useState("bedroom"); // Bedroom selected by default as in screenshot
+  const [activeCategory, setActiveCategory] = useState("bedroom"); // Bedroom selected by default
   const [thumbStyle, setThumbStyle] = useState({ top: 0, height: 38, opacity: 1 });
   const [trackHeight, setTrackHeight] = useState(320);
 
+  const navigate = useNavigate();
   const itemRefs = useRef({});
   const listRef = useRef(null);
   const scrollContainerRef = useRef(null);
 
   const categoriesData = [
-    { id: "bedroom", name: "Bedroom", img: Bed },
-    { id: "dining", name: "Dinning Room", img: Dining },
-    { id: "meeting", name: "Meeting Room", img: Meeting },
-    { id: "workspace", name: "Workspace", img: Office },
-    { id: "living", name: "Living Room", img: Living },
-    { id: "kitchen", name: "Kitchen", img: Kitchen },
+    { id: "bedroom", dbId: 1, name: "Bedroom", img: Bed },
+    { id: "dining", dbId: 2, name: "Dinning Room", img: Dining },
+    { id: "meeting", dbId: 3, name: "Meeting Room", img: Meeting },
+    { id: "workspace", dbId: 4, name: "Workspace", img: Office },
+    { id: "living", dbId: 5, name: "Living Room", img: Living },
+    { id: "kitchen", dbId: 6, name: "Kitchen", img: Kitchen },
+    { id: "living-space", dbId: 7, name: "Living Space", img: LivingSpace },
   ];
 
   const filteredCategories = categoriesData.filter((category) =>
@@ -82,24 +85,28 @@ function Category() {
   // Down arrow: select next category
   const handleNextCategory = () => {
     const currentIndex = categoriesData.findIndex((c) => c.id === activeCategory);
-    const newIndex = currentIndex === -1 || currentIndex >= categoriesData.length - 1 ? 0 : currentIndex + 1;
+    const newIndex =
+      currentIndex === -1 || currentIndex >= categoriesData.length - 1
+        ? 0
+        : currentIndex + 1;
     handleCategoryClick(categoriesData[newIndex].id);
   };
 
-  // All Categories button handler
+  // All Categories button handler - navigates to separate products page
   const handleAllCategories = () => {
-    setSearchTerm("");
-    setActiveCategory(null);
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    navigate("/category/all");
+  };
+
+  // Explore button on individual card - navigates to that specific category page
+  const handleExploreCategory = (cat) => {
+    navigate(`/category/${cat.dbId}`);
   };
 
   return (
     <section id="categories" className="category-section-container">
-    <div className="mt-5 mb=5"><h1 className="popular-heading">
-      Explore by Category
-      </h1></div>
+      <div className="mt-5 mb=5">
+        <h1 className="popular-heading">Explore by Category</h1>
+      </div>
       <div className="category-main-grid">
         {/* Left Sidebar */}
         <div className="category-sidebar">
@@ -263,7 +270,7 @@ function Category() {
                         className="category-explore-btn"
                         onClick={(e) => {
                           e.stopPropagation();
-                          alert(`Explore ${category.name}`);
+                          handleExploreCategory(category);
                         }}
                       >
                         Explore
